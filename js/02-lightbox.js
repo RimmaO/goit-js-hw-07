@@ -25,7 +25,7 @@ function createGalleryMarkup(items) {
 
 //* використовуємо бібліотеку SimpleLightbox (підключена в 02-lightbox.html)
 
-var lightbox = new SimpleLightbox(".gallery a", {
+const lightbox = new SimpleLightbox(".gallery a", {
   captionsData: "alt",
   captionPosition: "bottom",
   captionDelay: 250,
