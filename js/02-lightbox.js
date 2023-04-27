@@ -1,15 +1,13 @@
 import { galleryItems } from "./gallery-items.js";
 // Change code below this line
 
-console.log(galleryItems);
+// console.log(galleryItems);
 
 const addGalleryMarkup = createGalleryMarkup(galleryItems);
 const galleryList = document.querySelector(".gallery");
 
 galleryList.insertAdjacentHTML("beforeend", addGalleryMarkup);
 // console.log(galleryList);
-
-galleryList.addEventListener("click", onImageClick);
 
 function createGalleryMarkup(items) {
   return items
