@@ -39,7 +39,7 @@ function onImageClick(event) {
   if (!isGalleryImage) {
     return;
   }
-  //* else: картинка тоді виконуємо бібліотеку Lightbox (підключена в 01-gallery.html) ВІДКРИВАЄМО
+  //* else: картинка тоді використовуємо бібліотеку Lightbox (підключена в 01-gallery.html) ВІДКРИВАЄМО
 
   const instance = basicLightbox.create(`
     <img src= "${event.target.dataset.source}" width="800" height="600">
