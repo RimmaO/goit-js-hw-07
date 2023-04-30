@@ -50,7 +50,8 @@ function onImageClick(event) {
   galleryList.addEventListener("keydown", (event) => {
     if (event.code === "Escape") {
       instance.close();
-      galleryList.removeEventListener("click", onImageClick);
+      galleryList.removeEventListener("Escape", onImageClick);
     }
+    console.log("Hello");
   });
 }
