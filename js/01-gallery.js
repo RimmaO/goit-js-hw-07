@@ -47,11 +47,26 @@ function onImageClick(event) {
   instance.show();
 
   //* ЗАКРИВАЄМО
-  galleryList.addEventListener("keydown", (event) => {
+
+  //* Модалка закривається, і слухач  видаляється
+
+  function onImageClick(event) {
     if (event.code === "Escape") {
       instance.close();
-      galleryList.removeEventListener("Escape", onImageClick);
+      document.removeEventListener("keydown", onImageClick);
     }
-    console.log("Hello");
-  });
+    console.log("hello");
+  }
+  document.addEventListener("keydown", onImageClick);
 }
+
+//* Модалка закривається, але слухач не видаляється
+
+//   galleryList.addEventListener("keydown", (event) => {
+//     if (event.code === "Escape") {
+//       instance.close();
+//       galleryList.removeEventListener("Escape", onImageClick);
+//     }
+//     console.log("hello");
+//   });
+// }
